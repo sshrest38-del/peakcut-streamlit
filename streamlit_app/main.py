@@ -290,7 +290,7 @@ def loudness_per_second(audio: np.ndarray) -> np.ndarray:
 PROVIDERS = {
     "gemini": ("Gemini", "https://generativelanguage.googleapis.com/v1beta/models", "https://aistudio.google.com/apikey", "gemini-2.5-flash"),
     "openai": ("OpenAI", "https://api.openai.com/v1", "https://platform.openai.com/api-keys", "gpt-4o-mini"),
-    "xai": ("Grok", "https://api.x.ai/v1", "https://console.x.ai", "grok-4"),
+    "xai": ("Grok", "https://api.x.ai/v1", "https://console.x.ai", "grok-beta"),
     "groq": ("Groq", "https://api.groq.com/openai/v1", "https://console.groq.com/keys", "llama-3.3-70b-versatile"),
     "openrouter": ("OpenRouter", "https://openrouter.ai/api/v1", "https://openrouter.ai/keys", "google/gemini-2.5-flash"),
     "anthropic": ("Claude", "https://api.anthropic.com/v1", "https://console.anthropic.com", "claude-3-5-sonnet-20241022"),
