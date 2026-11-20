@@ -1094,8 +1094,12 @@ def page_ai_settings():
                     # Simple test call
                     import httpx
                     if provider == "gemini":
-                        url = f"{ai.base_url}/{ai.models.split(',')[0].strip()}:generateContent?key={ai.api_key}"
-                        resp = httpx.post(url, json={"contents": [{"parts": [{"text": "Hi"}]}]}, timeout=30)
+                        model = ai.models.split(',')[0].strip()
+                        url = f"{ai.base_url}/{model}:generateContent?key={ai.api_key}"
+                        resp = httpx.post(url, json={
+                            "contents": [{"parts": [{"text": "Hi"}]}],
+                            "generationConfig": {"responseMimeType": "application/json"}
+                        }, timeout=30)
                     elif provider == "anthropic":
                         resp = httpx.post(f"{ai.base_url}/messages",
                             json={"model": ai.models.split(',')[0].strip(), "max_tokens": 10,
