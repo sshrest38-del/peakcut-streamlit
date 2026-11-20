@@ -858,6 +858,13 @@ def render_sidebar():
         except:
             st.error("❌ FFmpeg not found")
         
+        st.divider()
+        
+        # GitHub link
+        st.markdown("### 🔗 Links")
+        st.markdown("[📦 GitHub Repo](https://github.com/sshrest38-del/peakcut-streamlit)")
+        st.markdown("[🐛 Report Issue](https://github.com/sshrest38-del/peakcut-streamlit/issues)")
+        
         return page
 
 
